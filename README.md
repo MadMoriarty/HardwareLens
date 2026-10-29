@@ -2,6 +2,8 @@
 
 A portable Windows desktop utility for understanding your hardware, finding what is using your PC, and managing apps, startup entries, and services. Built with C#, .NET 10, and Avalonia.
 
+[Download for Windows x64](https://github.com/MadMoriarty/HardwareLens/releases/latest) · [User guide](docs/user-guide.md) · [Build status](https://github.com/MadMoriarty/HardwareLens/actions)
+
 ![HardwareLens performance view](docs/screenshots/performance.png)
 
 The screenshot shows the actual application with live readings from a development PC. Available counters vary by hardware and driver.
@@ -23,12 +25,12 @@ No account, cloud backend, telemetry service, installed driver, or background ag
 
 Requirements: Windows x64 on a .NET 10 supported Windows version. The app targets Windows; it is not a Linux/macOS hardware monitor.
 
-1. Build a portable copy using the instructions below. If the repository has a published release, use only its attached portable package.
+1. Download `HardwareLens-win-x64.zip` from [Releases](https://github.com/MadMoriarty/HardwareLens/releases/latest), or build a portable copy using the instructions below.
 2. Extract the entire package into a writable folder and run `HardwareLens.exe`.
 3. Start as a standard user. Allow several readings for rate counters, then open **Overview**, **Apps**, or **Performance**.
 4. Read **Data & limits** when a value is unavailable. Use **Restart as administrator** only when an action or source needs additional rights.
 
-Portable builds include .NET, so users do not need to install a runtime. Builds are unsigned; Windows may show a SmartScreen warning. No prebuilt download is promised until a release is published.
+Portable builds include .NET, so users do not need to install a runtime. Builds are unsigned; Windows may show a SmartScreen warning.
 
 ## Build from source
 
