@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0-windows</TargetFramework><AssemblyName>HardwareLens.SelfTest</AssemblyName></PropertyGroup><ItemGroup><ProjectReference Include="../HardwareLens.Windows/HardwareLens.Windows.csproj"/></ItemGroup></Project>

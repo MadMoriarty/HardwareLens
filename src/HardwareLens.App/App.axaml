@@ -1,0 +1,38 @@
+<Application xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="HardwareLens.App.App" RequestedThemeVariant="Dark">
+ <Application.Styles>
+  <FluentTheme><FluentTheme.Palettes><ColorPaletteResources x:Key="Dark" Accent="#FF6B57"/><ColorPaletteResources x:Key="Light" Accent="#E5503C"/></FluentTheme.Palettes></FluentTheme>
+  <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
+  <Style Selector="Window"><Setter Property="Background" Value="#15171C"/><Setter Property="Foreground" Value="#E1E3EA"/><Setter Property="FontFamily" Value="Segoe UI"/><Setter Property="FontSize" Value="12"/></Style>
+  <Style Selector="Button"><Setter Property="MinHeight" Value="28"/><Setter Property="Padding" Value="10,4"/><Setter Property="CornerRadius" Value="4"/><Setter Property="Background" Value="#23262D"/><Setter Property="BorderBrush" Value="#363942"/><Setter Property="BorderThickness" Value="1"/></Style>
+  <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#2D313A"/><Setter Property="BorderBrush" Value="#4A4E5A"/></Style>
+  <Style Selector="Button.accent"><Setter Property="Background" Value="#FF6B57"/><Setter Property="Foreground" Value="#1A0D0A"/><Setter Property="BorderBrush" Value="#FF8A79"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+  <Style Selector="Button.accent:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#FF8070"/><Setter Property="BorderBrush" Value="#FFA195"/><Setter Property="Foreground" Value="#1A0D0A"/></Style>
+  <Style Selector="Button.accent:pressed /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#E5503C"/></Style>
+  <Style Selector="Button.ghost"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/></Style>
+  <Style Selector="Button.nav"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/><Setter Property="HorizontalAlignment" Value="Stretch"/><Setter Property="HorizontalContentAlignment" Value="Left"/><Setter Property="MinHeight" Value="30"/><Setter Property="Padding" Value="12,4"/><Setter Property="Margin" Value="0,0"/><Setter Property="Foreground" Value="#B4B8C4"/></Style>
+  <Style Selector="Button.nav:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#22252C"/><Setter Property="BorderBrush" Value="Transparent"/></Style>
+  <Style Selector="Button.nav.selected /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#2A2D36"/><Setter Property="BorderBrush" Value="Transparent"/></Style>
+  <Style Selector="Button.nav.selected"><Setter Property="Foreground" Value="#FFFFFF"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+  <Style Selector="Button.seg"><Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Padding" Value="12,3"/><Setter Property="MinHeight" Value="24"/><Setter Property="Foreground" Value="#9DA1AD"/></Style>
+  <Style Selector="Button.seg:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#23262D"/></Style>
+  <Style Selector="Button.seg.selected /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#33363F"/></Style>
+  <Style Selector="Button.seg.selected"><Setter Property="Foreground" Value="#FFFFFF"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+  <Style Selector="Button.danger"><Setter Property="Foreground" Value="#ED829F"/><Setter Property="BorderBrush" Value="#6B3A47"/></Style>
+  <Style Selector="Button.danger:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#3A252B"/><Setter Property="BorderBrush" Value="#ED829F"/></Style>
+  <Style Selector="TextBox"><Setter Property="MinHeight" Value="28"/><Setter Property="Padding" Value="8,4"/><Setter Property="Background" Value="#1B1D23"/><Setter Property="BorderBrush" Value="#363942"/><Setter Property="CornerRadius" Value="4"/></Style>
+  <Style Selector="ComboBox"><Setter Property="MinHeight" Value="28"/><Setter Property="Padding" Value="8,3"/><Setter Property="Background" Value="#1B1D23"/><Setter Property="BorderBrush" Value="#363942"/><Setter Property="CornerRadius" Value="4"/></Style>
+  <Style Selector="TextBlock.muted"><Setter Property="Foreground" Value="#8E929F"/></Style>
+  <Style Selector="TextBlock.caption"><Setter Property="Foreground" Value="#8E929F"/><Setter Property="FontSize" Value="10"/><Setter Property="FontWeight" Value="SemiBold"/><Setter Property="LetterSpacing" Value="1.1"/></Style>
+  <Style Selector="TextBlock.h1"><Setter Property="FontSize" Value="19"/><Setter Property="FontWeight" Value="Bold"/></Style>
+  <Style Selector="TextBlock.h2"><Setter Property="FontSize" Value="13"/><Setter Property="FontWeight" Value="Bold"/></Style>
+  <Style Selector="Border.card"><Setter Property="Background" Value="#1B1D23"/><Setter Property="BorderBrush" Value="#2C2F38"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="6"/><Setter Property="Padding" Value="12,10"/></Style>
+  <Style Selector="Border.chip"><Setter Property="Background" Value="#22252C"/><Setter Property="BorderBrush" Value="#363942"/><Setter Property="BorderThickness" Value="1"/><Setter Property="CornerRadius" Value="10"/><Setter Property="Padding" Value="8,1"/></Style>
+  <Style Selector="DataGrid"><Setter Property="Background" Value="#17191E"/><Setter Property="BorderThickness" Value="0"/><Setter Property="RowHeight" Value="28"/><Setter Property="GridLinesVisibility" Value="None"/><Setter Property="FontSize" Value="12"/><Setter Property="HeadersVisibility" Value="Column"/></Style>
+  <Style Selector="DataGridColumnHeader"><Setter Property="Background" Value="#1E2026"/><Setter Property="Foreground" Value="#9DA1AD"/><Setter Property="FontSize" Value="11"/><Setter Property="Padding" Value="8,7"/></Style>
+  <Style Selector="DataGridRow:selected /template/ Rectangle#BackgroundRectangle"><Setter Property="Fill" Value="#2E3340"/></Style>
+  <Style Selector="DataGridRow:selected:focus /template/ Rectangle#BackgroundRectangle"><Setter Property="Fill" Value="#2E3340"/></Style>
+  <Style Selector="DataGridRow:selected DataGridCell"><Setter Property="Foreground" Value="#FFFFFF"/></Style>
+  <Style Selector="DataGridCell"><Setter Property="Padding" Value="0"/><Setter Property="MinHeight" Value="26"/></Style>
+  <Style Selector="ScrollViewer"><Setter Property="AllowAutoHide" Value="False"/></Style>
+ </Application.Styles>
+</Application>

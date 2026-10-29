@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/HardwareLens.App/HardwareLens.App.csproj" />
+    <Project Path="src/HardwareLens.Core/HardwareLens.Core.csproj" />
+    <Project Path="src/HardwareLens.Windows/HardwareLens.Windows.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/HardwareLens.Tests/HardwareLens.Tests.csproj" />
+    <Project Path="src/HardwareLens.Probe/HardwareLens.Probe.csproj" />
+  </Folder>
+</Solution>

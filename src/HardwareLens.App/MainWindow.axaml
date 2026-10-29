@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="HardwareLens.App.MainWindow" Title="HardwareLens" Icon="avares://HardwareLens/Assets/HardwareLens.ico" Width="1320" Height="860" MinWidth="1040" MinHeight="660" WindowStartupLocation="CenterScreen" ExtendClientAreaToDecorationsHint="True" ExtendClientAreaChromeHints="NoChrome" ExtendClientAreaTitleBarHeightHint="42" SystemDecorations="BorderOnly">
+ <Window.Styles>
+  <Style Selector="Button.close"><Setter Property="Background" Value="#ED829F"/></Style>
+  <Style Selector="Button.close /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#ED829F"/></Style>
+  <Style Selector="Button.close:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#F7A3BA"/></Style>
+  <Style Selector="Button.close:pressed /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#D96F8D"/></Style>
+  <Style Selector="Button.minimize"><Setter Property="Background" Value="#DCA16A"/></Style>
+  <Style Selector="Button.minimize /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#DCA16A"/></Style>
+  <Style Selector="Button.minimize:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#EDB985"/></Style>
+  <Style Selector="Button.minimize:pressed /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#C48D58"/></Style>
+  <Style Selector="Button.maximize /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#33363F"/><Setter Property="BorderBrush" Value="#5A5E6B"/></Style>
+  <Style Selector="Button.maximize:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="#454955"/><Setter Property="BorderBrush" Value="#8E929F"/></Style>
+ </Window.Styles>
+ <Grid RowDefinitions="42,*,28">
+  <Border Grid.Row="0" Background="#1B1C22" BorderBrush="#2C2E36" BorderThickness="0,0,0,1" PointerPressed="TitlePointerPressed">
+   <Grid ColumnDefinitions="94,*,Auto" Margin="16,0">
+    <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+     <Button x:Name="CloseButton" Classes="close" Width="13" Height="13" MinHeight="0" Padding="0" CornerRadius="7" BorderThickness="0" Click="CloseClick" ToolTip.Tip="Close HardwareLens (Ctrl+W)" AutomationProperties.Name="Close HardwareLens"/>
+     <Button x:Name="MinimizeButton" Classes="minimize" Width="28" Height="13" MinHeight="0" Padding="0" CornerRadius="7" BorderThickness="0" Click="MinimizeClick" ToolTip.Tip="Minimize (Ctrl+M)" AutomationProperties.Name="Minimize HardwareLens"/>
+     <Button x:Name="MaximizeButton" Classes="maximize" Width="13" Height="13" MinHeight="0" Padding="0" CornerRadius="4" BorderThickness="1" Click="MaximizeClick" ToolTip.Tip="Maximize (F11)" AutomationProperties.Name="Maximize HardwareLens"/>
+    </StackPanel>
+    <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="12" VerticalAlignment="Center"><TextBlock Text="HARDWARELENS" FontWeight="SemiBold" LetterSpacing="2" FontSize="11"/><TextBlock Text="/" Foreground="#505461"/><TextBlock Text="What is going on inside this PC" Classes="muted" FontSize="11"/></StackPanel>
+    <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center"><TextBlock Text="LOCAL-ONLY · NO TELEMETRY" Classes="caption" VerticalAlignment="Center"/><Button x:Name="ExportButton" Classes="accent" Margin="6,0,0,0" ToolTip.Tip="Export a report (Ctrl+E for HTML, Ctrl+Shift+E for JSON)" AutomationProperties.Name="Export report"/></StackPanel>
+   </Grid>
+  </Border>
+  <Grid Grid.Row="1" ColumnDefinitions="200,*">
+   <Border Grid.Column="0" Background="#191A20" BorderBrush="#2C2E36" BorderThickness="0,0,1,0" Padding="10,10,8,10">
+    <Grid RowDefinitions="*,Auto">
+     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><StackPanel x:Name="NavHost"/></ScrollViewer>
+     <StackPanel Grid.Row="1" Spacing="6" Margin="4,8,0,0"><Button x:Name="AdminButton" HorizontalAlignment="Left" Click="AdminClick"/><Button x:Name="MiniButton" HorizontalAlignment="Left" Click="MiniClick"/><Button x:Name="ShortcutsButton" HorizontalAlignment="Left" Click="ShortcutsClick"/></StackPanel>
+    </Grid>
+   </Border>
+   <Grid Grid.Column="1" x:Name="ContentHost"/>
+  </Grid>
+  <Border Grid.Row="2" Background="#191A20" BorderBrush="#2C2E36" BorderThickness="0,1,0,0">
+   <Grid ColumnDefinitions="Auto,*,Auto" Margin="12,0">
+    <ContentControl x:Name="StateChip" VerticalAlignment="Center"/>
+    <TextBlock Grid.Column="1" x:Name="MessageText" Classes="muted" FontSize="11" Margin="14,0" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+    <TextBlock Grid.Column="2" x:Name="SelfText" Classes="muted" FontSize="11" VerticalAlignment="Center"/>
+   </Grid>
+  </Border>
+ </Grid>
+</Window>
